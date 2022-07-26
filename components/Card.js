@@ -1,15 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  AspectRatio,
-  Text,
-  Link,
-  Button,
-  Stack,
-  Image,
-  Divider,
-} from "@chakra-ui/react";
+import { Box, Flex, Text, Stack, Image, Divider } from "@chakra-ui/react";
 // import Image from "next/image";
 
 function Card(props) {
@@ -30,7 +20,6 @@ function Card(props) {
         height={["250px", "250px", "240px", "160px"]}
         src={card_img}
         alt="..."
-        //   style={{ borderRadius: "3px", margin: "0", padding: "0" }}
       />
 
       <Stack>
@@ -40,30 +29,30 @@ function Card(props) {
           fontSize="17px"
           letterSpacing="wide"
           color="#4a4a4a"
-          m="10px 0 30px 0"
+          m="12px 0 20px 0"
+          height={["30px", "30px", "55px", "55px"]}
         >
           {title}
         </Text>
-        <Text
-          my={1}
-          display="block"
-          fontSize="md"
-          lineHeight="normal"
-          fontWeight="normal"
-          href="#"
-          pb="14px"
-        >
-          {summary}
-        </Text>
-        <Divider />
-        <Flex justifyContent="center" p="15px 0 15px 0">
-          <Image
-            width="30px"
-            height="30px"
-            src={bottom_icon}
-            alt="..."
-            //   style={{ borderRadius: "3px", margin: "0", padding: "0" }}
-          />
+
+        <Flex height={["30px", "50px", "50px", "100px"]}>
+          <Text
+            my={1}
+            display="block"
+            fontSize="md"
+            lineHeight="22px"
+            fontWeight="normal"
+            href="#"
+            pb="0px"
+            noOfLines={[1, 2, 3, 4]}
+          >
+            {summary}
+          </Text>
+        </Flex>
+
+        <Divider pt={["10px"]} />
+        <Flex justifyContent="center" p="10px 0 10px 0">
+          <Image width="30px" height="30px" src={bottom_icon} alt="..." />
         </Flex>
       </Stack>
     </Box>

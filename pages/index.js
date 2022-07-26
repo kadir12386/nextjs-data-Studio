@@ -5,114 +5,16 @@ import {
   Box,
   Container,
   Flex,
-  Grid,
-  GridItem,
   Heading,
-  HStack,
-  LinkBox,
-  LinkOverlay,
   SimpleGrid,
   Stack,
   Text,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import Card from "../components/Card";
+import { dataList } from "../components/data";
 
 export default function Home() {
-  const dataList = [
-    {
-      id: "1",
-      card_img: "/img1.webp",
-      title: "Facebook Ads Overview Report",
-      summary: "This interactive dashboard gives a overview of data l",
-      bottom_icon: "/facebook.png",
-    },
-    {
-      id: "2",
-      card_img: "/img1.webp",
-      title: "Facebook Ads Overview Report",
-      summary: "This interactive dashboard gives a overview of data l",
-      bottom_icon: "/facebook.png",
-    },
-    {
-      id: "3",
-      card_img: "/img1.webp",
-      title: "Facebook Ads Overview Report",
-      summary: "This interactive dashboard gives a overview of data l",
-      bottom_icon: "/facebook.png",
-    },
-    {
-      id: "4",
-      card_img: "/img1.webp",
-      title: "Facebook Ads Overview Report",
-      summary: "This interactive dashboard gives a overview of data l",
-      bottom_icon: "/snapchat.png",
-    },
-
-    {
-      id: "5",
-      card_img: "/img1.webp",
-      title: "Facebook Ads Overview Report",
-      summary: "This interactive dashboard gives a overview of data l",
-      bottom_icon: "/snapchat.png",
-    },
-
-    {
-      id: "6",
-      card_img: "/img1.webp",
-      title: "Facebook Ads Overview Report",
-      summary: "This interactive dashboard gives a overview of data l",
-      bottom_icon: "/snapchat.png",
-    },
-
-    {
-      id: "7",
-      card_img: "/img1.webp",
-      title: "Facebook Ads Overview Report",
-      summary: "This interactive dashboard gives a overview of data l",
-      bottom_icon: "/snapchat.png",
-    },
-
-    {
-      id: "8",
-      card_img: "/img1.webp",
-      title: "Facebook Ads Overview Report",
-      summary: "This interactive dashboard gives a overview of data l",
-      bottom_icon: "/snapchat.png",
-    },
-
-    {
-      id: "9",
-      card_img: "/img1.webp",
-      title: "Facebook Ads Overview Report",
-      summary: "This interactive dashboard gives a overview of data l",
-      bottom_icon: "/snapchat.png",
-    },
-
-    {
-      id: "10",
-      card_img: "/img1.webp",
-      title: "Facebook Ads Overview Report",
-      summary: "This interactive dashboard gives a overview of data l",
-      bottom_icon: "/snapchat.png",
-    },
-
-    {
-      id: "11",
-      card_img: "/img1.webp",
-      title: "Facebook Ads Overview Report",
-      summary: "This interactive dashboard gives a overview of data l",
-      bottom_icon: "/snapchat.png",
-    },
-
-    {
-      id: "12",
-      card_img: "/img1.webp",
-      title: "Facebook Ads Overview Report",
-      summary: "This interactive dashboard gives a overview of data l",
-      bottom_icon: "/snapchat.png",
-    },
-  ];
   return (
     <div className={styles.container}>
       <Stack spacing={3} px={["20px", "30px", "30px", "140px"]} mt="20px">

@@ -1,10 +1,15 @@
+import { Flex, Heading } from "@chakra-ui/react";
 import React from "react";
-import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react";
-import { ChevronDownIcon } from "@chakra-ui/icons";
+// import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react";
+// import { ChevronDownIcon } from "@chakra-ui/icons";
 const homePage = () => {
   return (
     <div>
-      <Stack spacing={3} px={"140px"} mt="20px">
+      <Flex h={"90vh"} justify={"center"} mt="70px">
+        <Heading>Next Page</Heading>
+      </Flex>
+
+      {/* <Stack spacing={3} px={"140px"} mt="20px">
         <Text
           fontSize="40px"
           fontWeight={700}
@@ -23,9 +28,9 @@ const homePage = () => {
           Social Media activities, you have come to the right place. You don
           &apos;t need to use any proprietory tool, our templates work with
           Google Data Studio and stays with you.
-        </Text>
-        {/* Popular Templates*/}
-        Categories Mobile Advertising (PPC) Web Analytics SEO E-Commerce Social
+        </Text> */}
+      {/* Popular Templates*/}
+      {/* Categories Mobile Advertising (PPC) Web Analytics SEO E-Commerce Social
         Media
         <HStack spacing="24px" pt="50px">
           <Box w="20%" h="10" pt="30px">
@@ -101,7 +106,7 @@ const homePage = () => {
             </Heading>
           </Box>
         </HStack>
-      </Stack>
+      </Stack> */}
     </div>
   );
 };
