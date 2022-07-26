@@ -1,0 +1,121 @@
+import {
+  Badge,
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+import React from "react";
+
+const DataDetails = ({ data }) => {
+  //   console.log("current data", data);
+  return (
+    <div>
+      {/* <Flex h={"90vh"} justify={"center"} mt="70px">
+        <Heading>{data.title}</Heading>
+      </Flex> */}
+      <Flex
+        p={["30px 20px", "50px 40px", "50px 50px", "50px 180px"]}
+        direction={["column", "column", "column", "row"]}
+        justify={["center", "center", "center", ""]}
+        align={["center", "center", "center", ""]}
+      >
+        <Box w={["60%"]}>
+          <Image
+            width={["390px", "600px", "900px", "1000px"]}
+            height={["250px", "250px", "300px", "390px"]}
+            src={data.card_img}
+            alt="..."
+          />
+        </Box>
+
+        <Box
+          w={["100%", "100%", "100%", "50%"]}
+          pl={["10px", "10px", "10px", "50px"]}
+          mt={["20px", "20px", "", ""]}
+        >
+          <Heading as="h3" fontSize={["20px", "30px"]}>
+            {data.title}
+          </Heading>
+          <Text color={"#7a7a7a"} pt={"10px"}>
+            By Two Minute Reports - November 24, 2021
+          </Text>
+          <Badge
+            bg="#eeeefb"
+            color={"#2a2aca"}
+            textTransform="capitalize"
+            fontWeight={"400"}
+            my={"20px"}
+          >
+            Advertising (PPC)
+          </Badge>
+          <Flex>
+            <Image
+              width="30px"
+              height="30px"
+              my={"10px"}
+              src={data.bottom_icon}
+              alt={data.bottom_icon_name}
+            />{" "}
+            <Text
+              fontSize="18px"
+              color={"#696871"}
+              fontWeight="400"
+              my={"10px"}
+              pl="10px"
+            >
+              {data.bottom_icon_name}
+            </Text>
+          </Flex>
+
+          <Text fontSize="20px" color={"#696871"} fontWeight="600" my={"10px"}>
+            For use with Google Data Studio
+          </Text>
+          <Button
+            size="lg"
+            height="48px"
+            width="100%"
+            fontWeight={"400"}
+            bgColor="#4e4eda"
+            color={"white"}
+          >
+            Preview Template
+          </Button>
+          <Text color={"#4e4eda"} my={"10px"}>
+            HOW TO USE?
+          </Text>
+          <Text fontSize="17px" color={"#696871"} fontWeight="600" my={"10px"}>
+            License Type : Free with Two Minute Reports
+          </Text>
+        </Box>
+      </Flex>
+      <Stack mb="500px" p={["0px 20px", "0px 40px", "10px 50px", "10px 180px"]}>
+        <Heading as="h2" fontSize="25px">
+          About the Template
+        </Heading>
+        <Text>{data.summary}</Text>
+      </Stack>
+    </div>
+  );
+};
+
+export default DataDetails;
+
+export const getServerSideProps = async (context) => {
+  const id = context.params.id;
+  //   console.log("IDDDDD", id);
+
+  const api = await fetch(
+    "https://6120e9a524d11c001762ee48.mockapi.io/dataui/" + id
+  );
+  const data = await api.json();
+
+  return {
+    props: {
+      data,
+    },
+  };
+};

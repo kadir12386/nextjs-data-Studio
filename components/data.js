@@ -1,6 +1,6 @@
 export const dataList = [
   {
-    id: "1",
+    id: 1,
     card_img: "/img1.webp",
     title: "Facebook Ads Overview Report",
     summary:

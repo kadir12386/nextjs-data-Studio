@@ -14,7 +14,7 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import Card from "../components/Card";
 import { dataList } from "../components/data";
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <div className={styles.container}>
       <Stack spacing={3} px={["20px", "30px", "30px", "140px"]} mt="20px">
@@ -155,11 +155,13 @@ export default function Home() {
                 columns={[1, 1, 2, 3]}
                 spacingX={["0px", "20px", "20px", "20px"]}
               >
-                {dataList.map(function (data) {
+                {data.map(function (data) {
+                  console.log(data);
                   const { id, card_img, summary, title, bottom_icon } = data;
                   return (
                     <Card
                       key={id}
+                      id={id}
                       card_img={card_img}
                       title={title}
                       summary={summary}
@@ -175,3 +177,14 @@ export default function Home() {
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  const api = await fetch("https://6120e9a524d11c001762ee48.mockapi.io/dataui");
+  const data = await api.json();
+  console.log(data);
+  return {
+    props: {
+      data,
+    },
+  };
+};
