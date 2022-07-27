@@ -63,7 +63,7 @@ const DataDetails = ({ data }) => {
                 width="35px"
                 height="35px"
                 src={data.bottom_icon}
-                alt={data.title}
+                alt="..."
               />
             </Flex>
             {/* <Image
