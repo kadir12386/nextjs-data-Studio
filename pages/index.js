@@ -13,8 +13,10 @@ import {
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import Card from "../components/Card";
 import { dataList } from "../components/data";
+// import dataList from "../components/data.json";
 
 export default function Home({ data }) {
+  // console.log("dataList", dataList);
   return (
     <div className={styles.container}>
       <Stack spacing={3} px={["20px", "30px", "30px", "140px"]} mt="20px">
@@ -155,8 +157,8 @@ export default function Home({ data }) {
                 columns={[1, 1, 2, 3]}
                 spacingX={["0px", "20px", "20px", "20px"]}
               >
-                {data.map(function (data) {
-                  console.log(data);
+                {dataList.map(function (data) {
+                  // console.log("dataList form Local", data);
                   const { id, card_img, summary, title, bottom_icon } = data;
                   return (
                     <Card
@@ -178,13 +180,21 @@ export default function Home({ data }) {
   );
 }
 
+// export const getStaticProps = async () => {
+//   const api = await fetch("https://6120e9a524d11c001762ee48.mockapi.io/dataui");
+//   const data = await api.json();
+//   console.log(data);
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// };
+
 export const getStaticProps = async () => {
-  const api = await fetch("https://6120e9a524d11c001762ee48.mockapi.io/dataui");
-  const data = await api.json();
-  console.log(data);
   return {
     props: {
-      data,
+      dataList: dataList,
     },
   };
 };

@@ -9,9 +9,11 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-
+// import { dataList } from "../../components/data";
+// import db from "../components/data.json";
+import { dataList } from "../../components/data";
 const DataDetails = ({ data }) => {
-  //   console.log("current data", data);
+  // console.log("current data", dataList);
   return (
     <div>
       {/* <Flex h={"90vh"} justify={"center"} mt="70px">
@@ -104,18 +106,34 @@ const DataDetails = ({ data }) => {
 
 export default DataDetails;
 
-export const getServerSideProps = async (context) => {
-  const id = context.params.id;
-  //   console.log("IDDDDD", id);
+// export const getServerSideProps = async (context) => {
+//   const id = context.params.id;
+//   const api = await fetch(
+//     "https://6120e9a524d11c001762ee48.mockapi.io/dataui/" + id
+//   );
+//   // const api = await fetch("dataList/users/" + id);
+//   const data = await api.json();
 
-  const api = await fetch(
-    "https://6120e9a524d11c001762ee48.mockapi.io/dataui/" + id
-  );
-  const data = await api.json();
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// };
 
+export const getStaticProps = async ({ params }) => {
+  // console.log(params, "params");
+  const dataLists = dataList.filter((p) => p.id.toString() === params.id);
   return {
     props: {
-      data,
+      data: dataLists[0],
     },
   };
+};
+
+export const getStaticPaths = async () => {
+  const paths = dataList.map((s) => ({
+    params: { id: s.id.toString() },
+  }));
+  return { paths, fallback: false };
 };

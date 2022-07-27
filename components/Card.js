@@ -6,7 +6,7 @@ import ContentPage from "./ContentPage";
 
 function Card(props) {
   const { key, id, card_img, summary, title, bottom_icon } = props;
-  console.log(props);
+  // console.log(props);
   return (
     <Link key={key} href={"/users/" + props.id}>
       <Box
