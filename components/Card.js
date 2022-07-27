@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Flex, Text, Stack, Image, Divider } from "@chakra-ui/react";
+import { Box, Flex, Text, Stack, Divider } from "@chakra-ui/react";
 import Link from "next/link";
 import ContentPage from "./ContentPage";
-// import Image from "next/image";
+import Image from "next/image";
 
 function Card(props) {
   const { key, id, card_img, summary, title, bottom_icon } = props;
@@ -10,6 +10,7 @@ function Card(props) {
   return (
     <Link key={key} href={"/users/" + props.id}>
       <Box
+        as="button"
         bgColor="white"
         p="8px"
         m="0px"
@@ -19,10 +20,13 @@ function Card(props) {
         _focus={{ boxShadow: "outline" }}
       >
         <Image
-          width={["390px", "390px", "392px", "280px"]}
-          height={["250px", "250px", "240px", "160px"]}
+          // width={["390px", "390px", "392px", "280px"]}
+          // height={["250px", "250px", "240px", "160px"]}
+          width="280px"
+          height="160px"
           src={card_img}
           alt="..."
+          layout="responsive"
         />
 
         <Stack>

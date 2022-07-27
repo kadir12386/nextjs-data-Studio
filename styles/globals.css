@@ -41,3 +41,21 @@ a {
   bottom: 0;
   width: 100%;
 } */
+/* @media (max-width: 991px) {
+  .image_box {
+    width: 900px;
+    height: 240px;
+  }
+}
+@media (max-width: 991px) {
+  Image {
+    width: 392px;
+    height: 240px;
+  }
+}
+@media (max-width: 991px) {
+  Image {
+    width: 392px;
+    height: 240px;
+  }
+} */

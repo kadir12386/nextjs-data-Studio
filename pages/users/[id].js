@@ -4,13 +4,12 @@ import {
   Button,
   Flex,
   Heading,
-  Image,
   Stack,
   Text,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import React from "react";
-// import { dataList } from "../../components/data";
-// import db from "../components/data.json";
+
 import { dataList } from "../../components/data";
 const DataDetails = ({ data }) => {
   // console.log("current data", dataList);
@@ -25,12 +24,16 @@ const DataDetails = ({ data }) => {
         justify={["center", "center", "center", ""]}
         align={["center", "center", "center", ""]}
       >
-        <Box w={["60%"]}>
+        <Box w={["100%", "100%", "80%", "60%"]}>
           <Image
-            width={["390px", "600px", "900px", "1000px"]}
-            height={["250px", "250px", "300px", "390px"]}
-            src={data.card_img}
+            // width={["390px", "600px", "900px", "1000px"]}
+            // height={["250px", "250px", "300px", "390px"]}
+            width="1000px"
+            height="590px"
             alt="..."
+            // layout="responsive"
+            className="image_box"
+            src={data.card_img}
           />
         </Box>
 
@@ -55,13 +58,20 @@ const DataDetails = ({ data }) => {
             Advertising (PPC)
           </Badge>
           <Flex>
-            <Image
+            <Flex p="5px 0 20px 0">
+              <Image
+                width="35px"
+                height="35px"
+                src={data.bottom_icon}
+                alt={data.title}
+              />
+            </Flex>
+            {/* <Image
               width="30px"
               height="30px"
-              my={"10px"}
               src={data.bottom_icon}
               alt={data.bottom_icon_name}
-            />{" "}
+            />{" "} */}
             <Text
               fontSize="18px"
               color={"#696871"}
@@ -83,6 +93,8 @@ const DataDetails = ({ data }) => {
             fontWeight={"400"}
             bgColor="#4e4eda"
             color={"white"}
+            transition={"0.5s"}
+            _hover={{ bg: "#eeeefb", color: "#111" }}
           >
             Preview Template
           </Button>

@@ -30,34 +30,74 @@ const Navbar = () => {
           <Flex display={["none", "none", "none", "flex"]}>
             <Link href="/">
               <Center w="100px">
-                <Text>Home</Text>
+                <Text
+                  as="button"
+                  _hover={{ bg: "#eeeefb" }}
+                  p="8px 20px"
+                  borderRadius={"3px"}
+                >
+                  Home
+                </Text>
               </Center>
             </Link>
             <Link href="/HomePage">
               <Center w="100px">
-                <Text>Pricing</Text>
+                <Text
+                  as="button"
+                  _hover={{ bg: "#eeeefb" }}
+                  p="8px 20px"
+                  borderRadius={"3px"}
+                >
+                  Pricing
+                </Text>
               </Center>
             </Link>
             <Link href="/">
               <Center w="170px">
-                <Text>Knowledge Base</Text>
+                <Text
+                  as="button"
+                  _hover={{ bg: "#eeeefb" }}
+                  p="8px 20px"
+                  borderRadius={"3px"}
+                >
+                  Knowledge Base
+                </Text>
               </Center>
             </Link>
             <Link href="/">
               <Center w="110px">
-                <Text>Templates</Text>
+                <Text
+                  as="button"
+                  _hover={{ bg: "#eeeefb" }}
+                  p="8px 20px"
+                  borderRadius={"3px"}
+                >
+                  Templates
+                </Text>
               </Center>
             </Link>
 
             <Link href="/">
               <Center w="120px">
-                <Text>Whats New</Text>
+                <Text
+                  as="button"
+                  _hover={{ bg: "#eeeefb" }}
+                  p="8px 10px"
+                  borderRadius={"3px"}
+                >
+                  Whats New
+                </Text>
               </Center>
             </Link>
 
             <Link href="/">
               <Center w="170px">
-                <Text>
+                <Text
+                  as="button"
+                  _hover={{ bg: "#eeeefb" }}
+                  p="8px 10px"
+                  borderRadius={"3px"}
+                >
                   Other Products{" "}
                   <ChevronDownIcon
                     color="#4e4eda"
@@ -70,12 +110,26 @@ const Navbar = () => {
             </Link>
             <Link href="/">
               <Center w="100px">
-                <Text>Roadmap</Text>
+                <Text
+                  as="button"
+                  _hover={{ bg: "#eeeefb" }}
+                  p="8px 20px"
+                  borderRadius={"3px"}
+                >
+                  Roadmap
+                </Text>
               </Center>
             </Link>
             <Link href="/">
               <Center w="100px">
-                <Text>Account</Text>
+                <Text
+                  as="button"
+                  _hover={{ bg: "#eeeefb" }}
+                  p="8px 20px"
+                  borderRadius={"3px"}
+                >
+                  Account
+                </Text>
               </Center>
             </Link>
           </Flex>
