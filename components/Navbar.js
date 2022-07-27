@@ -22,9 +22,14 @@ const Navbar = () => {
     <>
       <VStack>
         <Flex w="100%" p="20px 50px 4px 7px">
-          <Box pl="16px">
-            <Image src="/logo.webp" width="150" height="59" />
-          </Box>
+          <Box pl="16px"></Box>
+          <Image
+            src="/logo.webp"
+            width="150"
+            height="59"
+            // layout="responsive"
+          />
+
           <Spacer />
 
           <Flex display={["none", "none", "none", "flex"]}>
