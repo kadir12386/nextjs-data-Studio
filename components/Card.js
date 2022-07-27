@@ -1,12 +1,10 @@
 import React from "react";
 import { Box, Flex, Text, Stack, Divider } from "@chakra-ui/react";
 import Link from "next/link";
-// import ContentPage from "./ContentPage";
 import Image from "next/image";
 
 function Card(props) {
   const { key, card_img, summary, title, bottom_icon } = props;
-  // console.log(props);
   return (
     <Link key={key} href={"/users/" + props.id}>
       <Box

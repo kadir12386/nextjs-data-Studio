@@ -11,13 +11,10 @@ import Image from "next/image";
 import React from "react";
 
 import { dataList } from "../../components/data";
+import Products from "../../components/Products";
 const DataDetails = ({ data }) => {
-  // console.log("current data", dataList);
   return (
     <div>
-      {/* <Flex h={"90vh"} justify={"center"} mt="70px">
-        <Heading>{data.title}</Heading>
-      </Flex> */}
       <Flex
         p={["30px 20px", "50px 40px", "50px 50px", "50px 180px"]}
         direction={["column", "column", "column", "row"]}
@@ -99,11 +96,16 @@ const DataDetails = ({ data }) => {
           </Text>
         </Box>
       </Flex>
-      <Stack mb="500px" p={["0px 20px", "0px 40px", "10px 50px", "10px 180px"]}>
+      <Stack p={["0px 20px", "0px 40px", "10px 50px", "10px 180px"]}>
         <Heading as="h2" fontSize="25px">
           About the Template
         </Heading>
         <Text>{data.summary}</Text>
+
+        {/* Product Box */}
+        <Box pb={["20px"]} p={"20px"}>
+          <Products />
+        </Box>
       </Stack>
     </div>
   );
@@ -127,7 +129,6 @@ export default DataDetails;
 // };
 
 export const getStaticProps = async ({ params }) => {
-  // console.log(params, "params");
   const dataLists = dataList.filter((p) => p.id.toString() === params.id);
   return {
     props: {

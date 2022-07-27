@@ -150,13 +150,13 @@ const Navbar = () => {
         >
           <BreadcrumbItem>
             <BreadcrumbLink href="#" color={"#4e4eda"} fontWeight={"500"}>
-              Home
+              <Link href="/">Home</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
 
           <BreadcrumbItem>
             <BreadcrumbLink href="#" color={"#4e4eda"} fontWeight={"500"}>
-              Templates
+              <Link href="/HomePage">Templates</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
 
