@@ -28,11 +28,9 @@ const DataDetails = ({ data }) => {
           <Image
             // width={["390px", "600px", "900px", "1000px"]}
             // height={["250px", "250px", "300px", "390px"]}
-            width="1000px"
-            height="590px"
-            alt="..."
-            // layout="responsive"
-            className="image_box"
+            width={1000}
+            height={590}
+            alt={data.title}
             src={data.card_img}
           />
         </Box>
@@ -59,12 +57,7 @@ const DataDetails = ({ data }) => {
           </Badge>
           <Flex>
             <Flex p="5px 0 20px 0">
-              <Image
-                width="35px"
-                height="35px"
-                src={data.bottom_icon}
-                alt="..."
-              />
+              <Image width={35} height={35} src={data.bottom_icon} alt="icon" />
             </Flex>
             {/* <Image
               width="30px"
