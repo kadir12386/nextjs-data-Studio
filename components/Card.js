@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Flex, Text, Stack, Divider } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
+import Icon from "./Icon";
 
 function Card(props) {
   const { key, card_img, summary, title, bottom_icon } = props;
@@ -61,10 +62,11 @@ function Card(props) {
           </Flex>
 
           <Divider pt={["10px"]} />
-          <Flex justifyContent="center" p="10px 0 10px 0">
-            {/* <Image width={30} height={30} src={bottom_icon} alt="..." /> */}
-            {/* <Image w={30} h={30} src={bottom_icon} alt="..." /> */}
-          </Flex>
+          <Icon bottom_icon={bottom_icon} />
+          {/* <Flex justifyContent="center" p="10px 0 10px 0">
+            <Image width={30} height={30} src={bottom_icon} alt="..." />
+            <Image w={30} h={30} src={bottom_icon} alt="..." />
+          </Flex> */}
         </Stack>
       </Box>
     </Link>
