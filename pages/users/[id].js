@@ -27,7 +27,7 @@ const DataDetails = ({ data }) => {
             // height={["250px", "250px", "300px", "390px"]}
             width={1000}
             height={590}
-            alt={data.title}
+            alt="..."
             src={data.card_img}
           />
         </Box>
@@ -54,7 +54,15 @@ const DataDetails = ({ data }) => {
           </Badge>
           <Flex>
             <Flex p="5px 0 20px 0">
-              <Image width={35} height={35} src={data.bottom_icon} alt="icon" />
+              <Image
+                width={35}
+                height={35}
+                src={data.bottom_icon}
+                alt="icon"
+                // layout="responsive"
+                // sizes="20px"
+                objectFit="cover"
+              />
             </Flex>
             {/* <Image
               width="30px"

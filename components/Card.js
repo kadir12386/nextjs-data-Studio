@@ -5,6 +5,7 @@ import Image from "next/image";
 
 function Card(props) {
   const { key, card_img, summary, title, bottom_icon } = props;
+
   return (
     <Link key={key} href={"/users/" + props.id}>
       <Box
@@ -57,7 +58,7 @@ function Card(props) {
 
           <Divider pt={["10px"]} />
           <Flex justifyContent="center" p="10px 0 10px 0">
-            <Image width="30" height="30" src={bottom_icon} alt="..." />
+            <Image width={30} height={30} src={bottom_icon} alt="..." />
           </Flex>
         </Stack>
       </Box>

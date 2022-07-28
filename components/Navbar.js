@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import {
   Box,
   Breadcrumb,
@@ -11,6 +11,7 @@ import {
   Spacer,
   Text,
   VStack,
+  Image,
   Button,
 } from "@chakra-ui/react";
 
@@ -22,8 +23,15 @@ const Navbar = () => {
     <>
       <VStack>
         <Flex w="100%" p="20px 50px 4px 7px">
-          <Image src="/logo.webp" width={150} height={59} alt="logo" />
-
+          {/* <Image src="/logo.webp" width="150px" height="59px" alt="logo" /> */}
+          {/* <Image src="/logo.webp" width="150px" height="59px" /> */}
+          <Image
+            w={["150px", "150px", "150px", "150px"]}
+            h={["59px"]}
+            objectFit="cover"
+            src="/logo.webp"
+            alt="logo"
+          />
           <Spacer />
 
           <Flex display={["none", "none", "none", "flex"]}>
