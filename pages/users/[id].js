@@ -57,13 +57,13 @@ const DataDetails = ({ data }) => {
           </Badge>
           <Flex>
             <Flex p="5px 0 20px 0">
-              {/* <Image
+              <Image
                 w={["35px", "35px", "35px", "35px"]}
                 h={["35px"]}
                 src={data.bottom_icon}
                 alt="icon"
                 objectFit="cover"
-              /> */}
+              />
               {/* next image */}
               {/* <Image
                 width={35}
