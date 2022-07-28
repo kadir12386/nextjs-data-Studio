@@ -13,9 +13,9 @@ import Card from "../components/Card";
 import { dataList } from "../components/data";
 import Products from "../components/Products";
 
-// export const config = {
-//   unstable_runtimeJs: false,
-// };
+export const config = {
+  unstable_runtimeJs: false,
+};
 export default function Home({ dataList }) {
   return (
     <div className={styles.container}>
