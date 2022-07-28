@@ -6,9 +6,10 @@ import {
   Heading,
   ListItem,
   Text,
+  Image,
   UnorderedList,
 } from "@chakra-ui/react";
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 
 const Footer = () => {
@@ -40,7 +41,14 @@ const Footer = () => {
         >
           {/* Grid 1 */}
           <GridItem w="100%">
-            <Image src="/footer_img.png" width={150} height={59} alt="logo" />
+            {/* <Image src="/footer_img.png" width={150} height={59} alt="logo" /> */}
+            <Image
+              w={["150px", "150px", "150px", "150px"]}
+              h={["59px"]}
+              objectFit="cover"
+              src="/footer_img.png"
+              alt="logo"
+            />
           </GridItem>
           {/* Grid 2 */}
           <GridItem w="100%">
