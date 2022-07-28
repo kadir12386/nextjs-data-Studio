@@ -19,7 +19,7 @@ import { ChevronDownIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 const Navbar = () => {
   return (
-    <>
+    <div>
       <VStack>
         <Flex
           w="100%"
@@ -208,7 +208,7 @@ const Navbar = () => {
           />
         </Button>
       </Flex>
-    </>
+    </div>
   );
 };
 

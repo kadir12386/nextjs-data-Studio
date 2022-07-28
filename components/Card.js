@@ -8,7 +8,7 @@ function Card(props) {
   const { key, card_img, summary, title, bottom_icon } = props;
 
   return (
-    <>
+    <div>
       <Link key={key} href={"/users/" + props.id}>
         <Box
           as="button"
@@ -71,7 +71,7 @@ function Card(props) {
           </Stack>
         </Box>
       </Link>
-    </>
+    </div>
   );
 }
 

@@ -6,15 +6,15 @@ import {
   Heading,
   ListItem,
   Text,
-  Image,
   UnorderedList,
 } from "@chakra-ui/react";
-// import Image from "next/image";
+import Image from "next/image";
+
 import React from "react";
 
 const Footer = () => {
   return (
-    <>
+    <div>
       <Box
         color="white"
         bgColor={"rgb(22, 29, 46)"}
@@ -41,6 +41,18 @@ const Footer = () => {
         >
           {/* Grid 1 */}
           <GridItem w="100%">
+            <div
+              style={{ position: "relative", width: "150px", height: "59px" }}
+            >
+              <Image
+                src="/footer_img.png"
+                objectFit="cover"
+                layout="responsive"
+                width={150}
+                height={59}
+              />
+            </div>
+            {/* in chakra */}
             {/* <Image src="/footer_img.png" width={150} height={59} alt="logo" /> */}
             {/* <Image
               w={["150px", "150px", "150px", "150px"]}
@@ -145,7 +157,7 @@ const Footer = () => {
           </Box>
         </Box>
       </Box>
-    </>
+    </div>
   );
 };
 

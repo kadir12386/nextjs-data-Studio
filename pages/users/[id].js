@@ -5,10 +5,10 @@ import {
   Flex,
   Heading,
   Stack,
-  Image,
   Text,
 } from "@chakra-ui/react";
-// import Image from "next/image";
+import Image from "next/image";
+
 import React from "react";
 
 import { dataList } from "../../components/data";
@@ -57,6 +57,17 @@ const DataDetails = ({ data }) => {
           </Badge>
           <Flex>
             <Flex p="5px 0 20px 0">
+              <div
+                style={{ position: "relative", width: "35px", height: "35px" }}
+              >
+                <Image
+                  src={data.bottom_icon}
+                  width={35}
+                  height={35}
+                  objectFit="cover"
+                  layout="responsive"
+                />
+              </div>
               {/* <Image
                 w={["35px", "35px", "35px", "35px"]}
                 h={["35px"]}
