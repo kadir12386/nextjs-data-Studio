@@ -63,7 +63,7 @@ function Card(props) {
             </Flex>
 
             <Divider pt={["10px"]} />
-            <Icon bottom_icon={bottom_icon} />
+            {/* <Icon bottom_icon={bottom_icon} /> */}
             {/* <Flex justifyContent="center" p="10px 0 10px 0">
             <Image width={30} height={30} src={bottom_icon} alt="..." />
             <Image w={30} h={30} src={bottom_icon} alt="..." />
