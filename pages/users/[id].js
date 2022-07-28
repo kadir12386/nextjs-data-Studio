@@ -13,24 +13,26 @@ import React from "react";
 
 import { dataList } from "../../components/data";
 import Products from "../../components/Products";
+import ImageCard from "./ImageCard";
 const DataDetails = ({ data }) => {
   return (
     <div>
       <Flex
-        p={["30px 20px", "50px 40px", "50px 50px", "50px 180px"]}
+        p={["40px 20px", "50px 40px", "50px 50px", "50px 180px"]}
         direction={["column", "column", "column", "row"]}
         justify={["center", "center", "center", ""]}
         align={["center", "center", "center", ""]}
       >
         <Box w={["100%", "100%", "80%", "60%"]}>
-          <Image
+          <ImageCard card={data.card_img} />
+          {/* <Image
             width={["400px", "600px", "900px", "1000px"]}
             height={["300px", "380px", "390px", "390px"]}
             // width={1000}
             // height={590}
             alt="..."
             src={data.card_img}
-          />
+          /> */}
         </Box>
 
         <Box
@@ -111,14 +113,14 @@ const DataDetails = ({ data }) => {
           </Text>
         </Box>
       </Flex>
-      <Stack p={["0px 20px", "0px 40px", "10px 50px", "10px 180px"]}>
+      <Stack p={["0px 20px", "0px 40px", "10px 50px", "10px 180px"]} mb="30px">
         <Heading as="h2" fontSize="25px">
           About the Template
         </Heading>
         <Text>{data.summary}</Text>
 
         {/* Product Box */}
-        <Box pb={["20px"]} p={"20px"}>
+        <Box pb={["20px"]} pl={"0px"} pt="30px">
           <Products />
         </Box>
       </Stack>

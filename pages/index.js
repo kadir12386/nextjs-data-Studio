@@ -147,7 +147,7 @@ export default function Home({ dataList }) {
                 })}
               </SimpleGrid>
             </Container>
-            <Box pb={["20px"]} pt={"20px"}>
+            <Box pb={["20px"]} pt={"20px"} pl={"0px"}>
               <Products />
             </Box>
           </Box>
