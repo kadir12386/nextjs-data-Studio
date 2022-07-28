@@ -154,9 +154,9 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-// export const getStaticPaths = async () => {
-//   const paths = dataList.map((s) => ({
-//     params: { id: s.id.toString() },
-//   }));
-//   return { paths, fallback: false };
-// };
+export const getStaticPaths = async () => {
+  const paths = dataList.map((s) => ({
+    params: { id: s.id.toString() },
+  }));
+  return { paths, fallback: false };
+};
