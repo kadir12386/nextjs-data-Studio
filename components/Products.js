@@ -15,6 +15,18 @@ const Products = () => {
         >
           {/* Box1 */}
           <Box>
+            <div
+              style={{ position: "relative", width: "150px", height: "59px" }}
+            >
+              <Image
+                src="/logo2.png"
+                objectFit="cover"
+                layout="responsive"
+                width={150}
+                height={59}
+              />
+            </div>
+            {/* try */}
             {/* <Image width={150} height={60} alt="logo" src="/logo2.png" /> */}
             {/* <Image
               w={["150px", "150px", "150px", "150px"]}
@@ -39,6 +51,17 @@ const Products = () => {
           </Flex>
           {/* Box2 */}
           <Box pt={["30px", "30px", "0px", "0px"]}>
+            <div
+              style={{ position: "relative", width: "150px", height: "59px" }}
+            >
+              <Image
+                src="/logo3.png"
+                objectFit="cover"
+                layout="responsive"
+                width={150}
+                height={59}
+              />
+            </div>
             {/* <Image width={150} height={60} alt="logo" src="/logo3.png" /> */}
             {/* <Image
               w={["150px", "150px", "150px", "150px"]}

@@ -31,13 +31,15 @@ const Navbar = () => {
           ]}
         >
           {/* <Image src="/logo.webp" width="150px" height="59px" alt="logo" /> */}
-          <Image
-            src="/logo.webp"
-            width={150}
-            height={59}
-            objectFit="cover"
-            quality={100}
-          />
+          <div style={{ position: "relative", width: "150px", height: "59px" }}>
+            <Image
+              src="/logo.webp"
+              width={150}
+              height={59}
+              objectFit="cover"
+              layout="responsive"
+            />
+          </div>
 
           {/* charka image */}
           {/* <Image
