@@ -2,10 +2,15 @@ import Layout from "../components/Layout";
 import "../styles/globals.css";
 
 import { ChakraProvider, extendTheme, ColorModeScript } from "@chakra-ui/react";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider>
+      <Head>
+        <title>20+ Google Data Studio Report</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       {/* <ColorModeScript initialColorMode="light"></ColorModeScript> */}
       <Layout>
         {" "}
