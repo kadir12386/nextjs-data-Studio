@@ -130,29 +130,29 @@ const DataDetails = ({ data }) => {
 
 export default DataDetails;
 
-export const getServerSideProps = async (context) => {
-  const id = context.params.id;
-  const api = await fetch(
-    "https://6120e9a524d11c001762ee48.mockapi.io/dataui/" + id
-  );
-  // const api = await fetch("dataList/users/" + id);
-  const data = await api.json();
+// export const getServerSideProps = async (context) => {
+//   const id = context.params.id;
+//   const api = await fetch(
+//     "https://6120e9a524d11c001762ee48.mockapi.io/dataui/" + id
+//   );
+//   // const api = await fetch("dataList/users/" + id);
+//   const data = await api.json();
 
-  return {
-    props: {
-      data,
-    },
-  };
-};
-
-// export const getStaticProps = async ({ params }) => {
-//   const dataLists = dataList.filter((p) => p.id.toString() === params.id);
 //   return {
 //     props: {
-//       data: dataLists[0],
+//       data,
 //     },
 //   };
 // };
+
+export const getStaticProps = async ({ params }) => {
+  const dataLists = dataList.filter((p) => p.id.toString() === params.id);
+  return {
+    props: {
+      data: dataLists[0],
+    },
+  };
+};
 
 // export const getStaticPaths = async () => {
 //   const paths = dataList.map((s) => ({
