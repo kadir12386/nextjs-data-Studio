@@ -5,9 +5,10 @@ import {
   Flex,
   Heading,
   Stack,
+  Image,
   Text,
 } from "@chakra-ui/react";
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 
 import { dataList } from "../../components/data";
@@ -23,10 +24,10 @@ const DataDetails = ({ data }) => {
       >
         <Box w={["100%", "100%", "80%", "60%"]}>
           <Image
-            // width={["390px", "600px", "900px", "1000px"]}
-            // height={["250px", "250px", "300px", "390px"]}
-            width={1000}
-            height={590}
+            width={["400px", "600px", "900px", "1000px"]}
+            height={["300px", "380px", "390px", "390px"]}
+            // width={1000}
+            // height={590}
             alt="..."
             src={data.card_img}
           />
@@ -55,14 +56,20 @@ const DataDetails = ({ data }) => {
           <Flex>
             <Flex p="5px 0 20px 0">
               <Image
+                w={["35px"]}
+                h={["35px"]}
+                src={data.bottom_icon}
+                alt="icon"
+                objectFit="cover"
+              />
+              {/* next image */}
+              {/* <Image
                 width={35}
                 height={35}
                 src={data.bottom_icon}
                 alt="icon"
-                // layout="responsive"
-                // sizes="20px"
                 objectFit="cover"
-              />
+              /> */}
             </Flex>
             {/* <Image
               width="30px"
