@@ -42,13 +42,13 @@ const Footer = () => {
           {/* Grid 1 */}
           <GridItem w="100%">
             {/* <Image src="/footer_img.png" width={150} height={59} alt="logo" /> */}
-            <Image
+            {/* <Image
               w={["150px", "150px", "150px", "150px"]}
               h={["59px"]}
               objectFit="cover"
               src="/footer_img.png"
               alt="logo"
-            />
+            /> */}
           </GridItem>
           {/* Grid 2 */}
           <GridItem w="100%">

@@ -16,13 +16,13 @@ const Products = () => {
           {/* Box1 */}
           <Box>
             {/* <Image width={150} height={60} alt="logo" src="/logo2.png" /> */}
-            <Image
+            {/* <Image
               w={["150px", "150px", "150px", "150px"]}
               h={["59px"]}
               objectFit="cover"
               src="/logo2.png"
               alt="logo"
-            />
+            /> */}
           </Box>
           <Flex
             direction={"column"}
@@ -40,13 +40,13 @@ const Products = () => {
           {/* Box2 */}
           <Box pt={["30px", "30px", "0px", "0px"]}>
             {/* <Image width={150} height={60} alt="logo" src="/logo3.png" /> */}
-            <Image
+            {/* <Image
               w={["150px", "150px", "150px", "150px"]}
               h={["59px"]}
               objectFit="cover"
               src="/logo3.png"
               alt="logo"
-            />
+            /> */}
           </Box>
           <Flex
             direction={"column"}

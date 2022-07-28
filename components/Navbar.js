@@ -33,13 +33,13 @@ const Navbar = () => {
         >
           {/* <Image src="/logo.webp" width="150px" height="59px" alt="logo" /> */}
           {/* <Image src="/logo.webp" width="150px" height="59px" /> */}
-          <Image
+          {/* <Image
             w={["150px", "150px", "150px", "150px"]}
             h={["59px"]}
             objectFit="cover"
             src="/logo.webp"
             alt="logo"
-          />
+          /> */}
           <Spacer />
 
           <Flex display={["none", "none", "none", "flex"]}>
