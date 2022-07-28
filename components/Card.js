@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Flex, Text, Stack, Image, Divider } from "@chakra-ui/react";
+import { Box, Flex, Text, Stack, Divider } from "@chakra-ui/react";
 import Link from "next/link";
-// import Image from "next/image";
+import Image from "next/image";
 
 function Card(props) {
   const { key, card_img, summary, title, bottom_icon } = props;
@@ -19,17 +19,17 @@ function Card(props) {
         _focus={{ boxShadow: "outline" }}
       >
         <Image
-          w={["100%", "100%", "100%", "100%"]}
-          h={["250px", "300px", "240px", "160px"]}
+          // w={["100%", "100%", "100%", "100%"]}
+          // h={["250px", "300px", "240px", "160px"]}
           // width={["390px", "390px", "392px", "280px"]}
           // height={["250px", "250px", "240px", "160px"]}
-          // width="280px"
-          // height="160px"
+          width="280px"
+          height="160px"
           src={card_img}
           alt="..."
           // objectFit="cover"
           // boxSize="150px"
-          // layout="responsive"
+          layout="responsive"
         />
 
         <Stack>
@@ -63,7 +63,7 @@ function Card(props) {
           <Divider pt={["10px"]} />
           <Flex justifyContent="center" p="10px 0 10px 0">
             {/* <Image width={30} height={30} src={bottom_icon} alt="..." /> */}
-            <Image w={30} h={30} src={bottom_icon} alt="..." />
+            {/* <Image w={30} h={30} src={bottom_icon} alt="..." /> */}
           </Flex>
         </Stack>
       </Box>
