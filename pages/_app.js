@@ -1,8 +1,10 @@
-import Layout from "../components/Layout";
+// import Layout from "../components/Layout";
 import "../styles/globals.css";
 
 import { ChakraProvider, extendTheme, ColorModeScript } from "@chakra-ui/react";
 import Head from "next/head";
+import dynamic from "next/dynamic";
+const Layout = dynamic(() => import("../components/Layout"));
 
 function MyApp({ Component, pageProps }) {
   return (

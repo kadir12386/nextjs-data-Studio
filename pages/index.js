@@ -13,13 +13,13 @@ import styles from "../styles/Home.module.css";
 // import { dataList } from "../components/data";
 // import Products from "../components/Products";
 import dynamic from "next/dynamic";
-import MainPageContent from "../components/MainPageContent";
+// import MainPageContent from "../components/MainPageContent";
 // import MainPage from "../components/MainPage";
 
 export const config = {
   unstable_runtimeJs: false,
 };
-
+const MainPageContent = dynamic(() => import("../components/MainPageContent"));
 const MainPage = dynamic(() => import("../components/MainPage"));
 export default function Home() {
   return (
