@@ -11,6 +11,7 @@ import {
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import Card from "./Card";
 import { dataList } from "./data";
+
 import Products from "./Products";
 
 const MainPage = () => {
@@ -18,7 +19,6 @@ const MainPage = () => {
     <div>
       <Stack spacing={3} px={["20px", "30px", "30px", "140px"]} mt="20px">
         {/* Popular Templates*/}
-
         <Flex
           spacing="24px"
           pt={["20px", "20px", "50px", "50px"]}
@@ -141,10 +141,10 @@ const MainPage = () => {
 
 export default MainPage;
 
-// export const getStaticProps = async () => {
-//   return {
-//     props: {
-//       dataList: dataList,
-//     },
-//   };
-// };
+export const getStaticProps = async () => {
+  return {
+    props: {
+      dataList: dataList,
+    },
+  };
+};

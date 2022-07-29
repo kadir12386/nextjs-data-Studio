@@ -1,7 +1,9 @@
 import React from "react";
-import Footer from "./Footer/Footer";
+// import Footer from "./Footer/Footer";
 import Navbar from "./Navbar";
+import dynamic from "next/dynamic";
 
+const Footer = dynamic(() => import("./Footer/Footer"));
 const Layout = ({ children }) => {
   return (
     <div>
